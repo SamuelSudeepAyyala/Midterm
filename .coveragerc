@@ -1,0 +1,10 @@
+[run]
+omit =
+    *main.py
+    tests/conftest.py
+    tests/__init__.py
+    app/__init__.py
+
+[coverage:report]
+exclude_lines =
+    @abstractmethod
