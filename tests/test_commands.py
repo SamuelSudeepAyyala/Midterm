@@ -8,10 +8,10 @@ ensuring that each command behaves as expected under normal
 conditions and handles exceptional cases (like division by zero).
 """
 import pytest
-from app.commands.add import AddCommand
-from app.commands.subtract import SubtractCommand
-from app.commands.multiply import MultiplyCommand
-from app.commands.divide import DivideCommand
+from app.plugins.add import AddCommand
+from app.plugins.subtract import SubtractCommand
+from app.plugins.multiply import MultiplyCommand
+from app.plugins.divide import DivideCommand
 
 def test_add_command():
     """Test the functionality of the AddCommand."""
