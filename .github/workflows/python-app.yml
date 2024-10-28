@@ -36,4 +36,4 @@ jobs:
         pytest --pylint
     - name: Test with pytest --cov
       run: |
-        pytest --cov
+        pytest --pylint --cov
