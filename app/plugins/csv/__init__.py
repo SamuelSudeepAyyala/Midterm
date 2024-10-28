@@ -15,13 +15,14 @@ class CsvCommand(Command):
         data_dir = './data'
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
-            logging.info(f"The directory '{data_dir}' is created")
 
         elif not os.access(data_dir, os.W_OK):
-            logging.error(f"The directory '{data_dir}' is not writable.")
             return
         
         history = self.history_manager
+        if not isinstance(self.history_manager, list) or not all(isinstance(i, dict) for i in self.history_manager):
+            logging.error("Invalid data format in history manager. Expected a list of dictionaries.")
+            return
         
         # Create a DataFrame from the history list
         df = pd.DataFrame(history)
@@ -30,17 +31,3 @@ class CsvCommand(Command):
         # Export to CSV
         df.to_csv(self.filename, mode='a', header=not file_exists, index=False)
         print(f"History exported to {self.filename} in the specified format.")
-        
-    def display_csv(self):
-        csv_file_path = os.path.join(self.data_dir, self.history_file)
-        if os.path.exists(csv_file_path):
-            df = pd.read_csv(csv_file_path)
-            print("Calculation History:")
-            logging.info("Displaying calculation history.")
-            for index, row in df.iterrows():
-                print(f"{row['Operation']}({row['Operand1']}, {row['Operand2']}) = {row['Result']}")
-                logging.info(f"Record {index}: {row['Operation']}({row['Operand1']}, {row['Operand2']}) = {row['Result']}")
-        else:
-            logging.warning(f"No calculation history found at '{csv_file_path}'")
-            print("No calculation history found.")
-

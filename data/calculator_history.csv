@@ -1,9 +1,2 @@
-Addition,3.0,4.0,7.0
-Subtraction,10.0,4.0,6.0
-Subtraction,3.0,4.0,-1.0
-Addition,3.0,4.0,7.0
-Addition,3.0,23.0,26.0
-Addition,3.0,4.0,7.0
-Addition,3.0,4.0,7.0
-Subtraction,4.0,3.0,1.0
-Addition,3.0,4.0,7.0
+Operation,Operand1,Operand2,Result
+Multiplication,5.0,3.0,15.0
