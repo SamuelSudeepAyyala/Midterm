@@ -32,7 +32,7 @@ jobs:
       run: |
         pytest
     - name: Test with pytest --pylint
-      run: |
+      run: |  
         pytest --pylint
     - name: Test with pytest --cov
       run: |
