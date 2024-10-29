@@ -2,6 +2,8 @@
 
 This project will implement a Python-based REPL (Read-Eval-Print Loop) calculator that will explain modern software engineering principles using plugin architecture and design patterns. This project is built using Command Pattern and a plugin-based system. This calculator will support basic arithmetic operations along with maintaining calculation history using Pandas integration. Because each activity appears as an individual command, the application's  design allows simple functionality extension through plugins, supporting loose coupling and maintainable code. Important features include continuous integration using GitHub Actions, extensive error handling, unit testing with pytest, and durable storage of calculation history in CSV format. The solution serves as a great example of how to create software applications that are expandable, maintainable, and thoroughly tested by showing the practical application of software design principles such as environment variable configuration, strong logging, and a plugin architecture.
 
+You can find the explanation video [here](https://drive.google.com/file/d/17ab4A5PzCJrxYgaxVPLkqLxmixgGQFBc/view?usp=drive_link)
+
 ## Branches
 Based on the project requirements, the branches in the repository are:
 - **master**: This is the main branch containing all the core functionality which will contain the complete implementation of:
